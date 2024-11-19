@@ -1,26 +1,76 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>commercial Alcogaz</title>
+    <title>Money Transmission Receipt</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="img/ALKOGAZ_LOGO_icone.ico" sizes="65x65" type="image/x-icon">
-    <link rel="shortcut icon" href="img/ALKOGAZ_LOGO_icone.ico"  sizes="65x65" type="image/x-icon">
-
 </head>
 <body>
-    <div class="bg">
-        <div class="indexpage">
-            <img  src="img/ALKOGAZ_LOGO.png" alt="">
+    <div class="container">
+        <h1>Organize Money Transmission Receipts</h1>
+        
+        <!-- Displaying Logo -->
+        <img src="img/ALKOGAZ_LOGO.png" alt="Company Logo" class="logo">
+
+        <form id="receipt-form">
+            <!-- Bills Section -->
+
+            <h2>Billets</h2>
+            <label for="bill-2000">2000 DA:</label>
+            <input type="number" id="bill-2000" value="0">
+            
+            <label for="bill-1000">1000 DA:</label>
+            <input type="number" id="bill-1000" value="0">
+            
+            <label for="bill-500">500 DA:</label>
+            <input type="number" id="bill-500" value="0">
+            
+            <!-- Coins Section -->
+            <h2>Pièces</h2>
+            <label for="coin-200">200 DA:</label>
+            <input type="number" id="coin-200" value="0">
+            
+            <label for="coin-100">100 DA:</label>
+            <input type="number" id="coin-100" value="0">
+            
+            <label for="coin-50">50 DA:</label>
+            <input type="number" id="coin-50" value="0">
+            
+            <label for="coin-20">20 DA:</label>
+            <input type="number" id="coin-20" value="0">
+            
+            <label for="coin-10">10 DA:</label>
+            <input type="number" id="coin-10" value="0">
+            
+            <label for="coin-5">5 DA:</label>
+            <input type="number" id="coin-5" value="0">
+            
+            <!-- Recipient Details -->
+            <h2>Recipient Details</h2>
+            <label for="recipient-name">Recipient Name:</label>
+            <select id="recipient-name">
+                <option value="BELLAKHDAR ABDELDJABAR">BELLAKHDAR ABDELDJABAR</option>
+                <option value="SRIW MOHAMMED">SRIW MOHAMMED</option>
+                <option value="KHEMGANI MOHAMMED">KHEMGANI MOHAMMED</option>
+                <option value="RIGHI MOHAMMED">RIGHI MOHAMMED</option>
+                <option value="BEN HAMOUDA ABDELMALEK">BEN HAMOUDA ABDELMALEK</option>
+            </select>
+            
+            <button type="button" id="generate-pdf">Generate PDF</button>
+        </form>
+
+        <!-- Total Display -->
+        <div id="total-display">
+            <h3>Total Amount: <span id="total-amount">0 DA</span></h3>
         </div>
     </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
-</html>  
-
+</html>
 
 
 
